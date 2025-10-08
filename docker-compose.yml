@@ -13,19 +13,22 @@ services:
       - mysql:/var/lib/mysql
       - data_main:/var/uoj_data
       - data_copy:/var/uoj_data_copy
-      - web:/opt/uoj/web
+      - ./web/app/views:/opt/uoj/web/app/views
+      - ./web/app/controllers:/opt/uoj/web/app/controllers
+      - ./web/app/locale:/opt/uoj/web/app/locale
+      - ./web/public:/opt/uoj/web/public
+      - ./web/app/models:/opt/uoj/web/app/models
       - var_log:/var/log
       - judger:/opt/uoj/judger
       - svn:/var/svn
     ports:
-     - "80:80"
+     - "8080:80"
      - "3690:3690"
 
 volumes:
   mysql:
   data_main:
   data_copy:
-  web:
   var_log:
   judger:
   svn:
