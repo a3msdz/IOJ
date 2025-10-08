@@ -2,9 +2,9 @@
 
 class UOJLocale {
 	public static $supported_locales = [
-		'zh-cn' => [
-			'name' => '中文',
-			'img' => '//img.uoj.ac/utility/flags/24/cn.png'
+		'vi' => [
+			'name' => 'Tiếng Việt',
+			'img' => '//img.uoj.ac/utility/flags/24/vn.png'
 		],
 		'en' => [
 			'name' => 'English',
@@ -33,7 +33,7 @@ class UOJLocale {
 			Cookie::unsetVar('uoj_locale', '/');
 		}
 		if ($locale == null) {
-			$locale = 'zh-cn';
+			$locale = 'vi';
 		}
 		return $locale;
 	}
